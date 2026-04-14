@@ -107,4 +107,110 @@
 
 ---
 
-Just tell me the format you want.
+# **📌 DOMContentLoaded**
+- Fires when **HTML is fully loaded and parsed**.
+- Does **not** wait for images, stylesheets, or external resources.
+- Useful for safely running JS that touches the DOM.
+
+---
+
+# **📌 Working with `style` and `classList`**
+
+### **Element.style**
+- Accesses or sets **inline styles**.
+- Example:  
+  ```js
+  paraEl.style.color = "red";
+  ```
+
+### **Element.classList**
+- Add, remove, or toggle CSS classes.
+- Methods:  
+  - `.add("class")`  
+  - `.remove("class")`  
+  - `.toggle("class")`
+- Example toggle:
+  ```js
+  toggleBtn.addEventListener("click", () => menu.classList.toggle("show"));
+  ```
+
+---
+
+# **📌 setTimeout()**
+- Runs code **once after a delay**.
+- Example:
+  ```js
+  setTimeout(() => console.log("Runs after 3s"), 3000);
+  ```
+
+# **📌 setInterval()**
+- Runs code **repeatedly** at fixed intervals.
+- Use `clearInterval()` to stop it.
+- Example:
+  ```js
+  const id = setInterval(() => console.log("Tick"), 1000);
+  setTimeout(() => clearInterval(id), 5000);
+  ```
+
+---
+
+# **📌 requestAnimationFrame()**
+- Schedules animation updates **before the next screen repaint**.
+- Produces smoother animations than `setInterval`.
+- Example loop:
+  ```js
+  function animate() {
+    update();
+    requestAnimationFrame(animate);
+  }
+  ```
+
+---
+
+# **📌 Web Animations API**
+- Create animations directly in JS.
+- Supports duration, easing, direction, iterations, etc.
+- Example:
+  ```js
+  square.animate(
+    [{ transform: 'translateX(0)' }, { transform: 'translateX(100px)' }],
+    { duration: 2000, iterations: Infinity, direction: 'alternate' }
+  );
+  ```
+
+---
+
+# **📌 Canvas API**
+- Used for drawing shapes, text, images, and graphics.
+- Requires a `<canvas>` element and a rendering context.
+- Example:
+  ```js
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'crimson';
+  ctx.fillRect(1, 1, 150, 100);
+  ```
+
+---
+
+# **📌 Dialogs & Modals (`<dialog>` element)**
+
+### **Modal vs Non‑Modal**
+- **Modal**: blocks interaction with the rest of the page.
+- **Non‑modal**: allows interaction with the page behind it.
+
+### **Open a modal**
+```js
+dialog.showModal();
+```
+
+### **Open a non‑modal dialog**
+```js
+dialog.show();
+```
+
+### **Close a dialog**
+```js
+dialog.close();
+```
+---
+
