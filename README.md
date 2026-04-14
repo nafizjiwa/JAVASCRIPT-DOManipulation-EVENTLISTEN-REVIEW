@@ -4,73 +4,68 @@
 # **DOM & JavaScript Events**
 
 ### **APIs & Web APIs**
-- **API**: Rules that let software communicate.
-- **Web APIs**: APIs for the browser environment.
+- **API**: (Application Programming Interface) Rules that let software communicate with each toher.
+- **Web APIs**: APIs for the browser or the web.
   - **Browser APIs**: Built into the browser (DOM, window, navigator).
-  - **Third‑Party APIs**: External services (ex: Google Maps).
-
+  - **Third‑Party APIs**: retrieve code from external services (ex: Google Maps).
 ---
 
 ### **DOM Basics**
+- Programming interface to interact with HTML documents
 - **DOM (Document Object Model)**: Tree structure representing HTML.
-- **Root node**: `<html>`.
-- **Parent node**: Contains other elements.
-- **Child node**: Element inside another element.
-
+  - **Root node**: `<html>` element or top level container.
+  - Desendents of the root
+    - **Parent node**: Contains other elements.
+    - **Child node**: Element inside another element.
 ---
 
 ### **Browser Interfaces**
-- **navigator**: Info about browser, OS, user agent.
-- **window**: Represents browser window; controls navigation, size, etc.
-
+- **navigator interface**: Info about browser, OS, user agent.
+- **window interface**: Represents browser window; controls navigation, size, etc.
 ---
 
 # **DOM Selection Methods**
-### **getElementById()**
-- Selects **one** element by unique ID.
-
-### **querySelector()**
-- Selects the **first** element matching a CSS selector.
-
-### **querySelectorAll()**
-- Selects **all** matching elements; returns a NodeList.
-
+    ### **getElementById()**
+    - Selects and returns **one** element by unique ID.
+    
+    ### **querySelector()**
+    - Selects and returns the **first** element matching a CSS selector.
+    
+    ### **querySelectorAll()**
+    - Selects and returns **all** matching elements in a NodeList.
 ---
 
 # **Working With Content**
-### **innerHTML**
+### **innerHTML( )**
 - Sets/gets HTML markup inside an element.
 
 ### **createElement()**
 - Creates a new DOM element.
 
 ### **innerText**
-- Returns **visible** text only.
+- Returns **visible** text of chosen element and its descendents.
 
 ### **textContent**
 - Returns **all** text, including hidden text.
-
 ---
 
 # **Adding & Removing Elements**
 ### **appendChild()**
-- Adds a node to the end of a parent’s children.
+- Adds a node to the   -END- of a parent’s children.
 
 ### **removeChild()**
 - Removes a specific child node from the DOM.
-
 ---
 
 # **Attributes**
-### **setAttribute()**
+### **setAttribute(attributeName, attributeValue)**
 - Adds or updates an attribute on an element.
-
+- AttributeNames  - class, id, src, href, lt, data-user
 ---
 
 # **Events & Event Object**
 - **Event object**: Contains details about the triggered event.
 - `.type` shows event type (e.g., `"click"`).
-
 ---
 
 # **Event Listeners**
@@ -213,4 +208,5 @@ dialog.show();
 dialog.close();
 ```
 ---
+
 
