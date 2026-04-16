@@ -46,12 +46,12 @@
 - Returns **visible** text of chosen element and its descendents.
 
 ### **textContent**
-- Returns **all** text, including hidden text.
+- Returns **all** text Content as it appears in DOM, including hidden text.
 ---
 
 # **Adding & Removing Elements**
 ### **appendChild()**
-- Adds a node to the   -END- of a parent’s children.
+- Adds a node to the -END- of a parent’s children.
 
 ### **removeChild()**
 - Removes a specific child node from the DOM.
