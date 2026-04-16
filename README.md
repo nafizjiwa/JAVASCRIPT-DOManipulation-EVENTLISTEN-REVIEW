@@ -53,9 +53,6 @@
 ### **appendChild()**
 - Adds a node to the -END- of a parent’s children.
 
-### **removeChild()**
-- Removes a specific child node from the DOM.
-
       <ul id="desserts">
         <li>Cake</li>
         <li>Pie</li>
@@ -67,6 +64,9 @@
       listItem.textContent = "Cookies";
       dessertsList.appendChild(listItem);
 ---
+
+### **removeChild()**
+- Removes a specific child node from the DOM.
 
 # **Attributes**
 ### **setAttribute(attributeName, attributeValue)**
