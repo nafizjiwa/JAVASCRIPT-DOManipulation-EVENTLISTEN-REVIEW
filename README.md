@@ -56,7 +56,7 @@
 ### **removeChild()**
 - Removes a specific child node from the DOM.
 
-    - <ul id="desserts">
+      <ul id="desserts">
         <li>Cake</li>
         <li>Pie</li>
       </ul>
