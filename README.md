@@ -72,62 +72,63 @@
 - Removes a specific child node from the DOM.
 
 # **Attributes**
-### **setAttribute(attributeName, attributeValue)**
+### **setAttribute( )**
+- **setAttribute(attributeName, attributeValue)**
 - Adds or updates an attribute on an element.
 - AttributeNames  - class, id, src, href, lt, data-user
 ---
 
 # **Events & Event Object**
-- **Event object**: Contains details about the triggered event.
-- `.type` shows event type (e.g., `"click"`).
+- **Event object**: Contains details (payload) about the triggered event.
+- `.type` shows event type in all event objects (e.g., `"click"`).
 ---
 
 # **Event Listeners**
-### **addEventListener()**
+### **addEventListener(eventToListenFor, functionToRunWhenEventOccurs)**
 - Listens for events (click, input, change, etc.).
+- Calls a function when event triggered
 
 ### **removeEventListener()**
 - Removes a previously attached listener.
+- Calls a function when event triggered
 
 ### **Inline Handlers**
+- Attributes on HTML elements to execute JS when event occurs
 - `<button onclick="...">`  
 - Not best practice; use addEventListener instead.
 
 ---
 
-# **Specific Events**
+# **TYPES OF EVENTS**
 ### **change Event**
-- Fires when input value changes (select, checkbox, radio, etc.).
+- Fires when INPUT VALUE CHANGED BY USER (select, checkbox, radio, etc.).
 
 ---
 
 # **Event Flow**
 ### **Event Bubbling**
-- Event travels **from child → parent**.
+- Event travels OR BUBBLES UP**from child → parent**.
 
 ### **stopPropagation()**
 - Stops the event from bubbling further.
 
 ---
-
 # **Event Delegation**
+- Listening to events that have bubbled up to a parent
 - Attach one listener to a **parent** to handle events from **multiple children**.
-- Efficient for dynamic content.
 
 ---
-
 # **📌 DOMContentLoaded**
-- Fires when **HTML is fully loaded and parsed**.
+- Fires when **HTML document is fully loaded and parsed**.
 - Does **not** wait for images, stylesheets, or external resources.
-- Useful for safely running JS that touches the DOM.
 
 ---
 
-# **📌 Working with `style` and `classList`**
+# **📌 Working with `style` and `classList` PROPERTIES**
 
 ### **Element.style**
-- Accesses or sets **inline styles**.
-- Example:  
+- Gets or sets **inline styles OF AN ELEMENT**.
+- Ex:  
   ```js
   paraEl.style.color = "red";
   ```
@@ -135,36 +136,33 @@
 ### **Element.classList**
 - Add, remove, or toggle CSS classes.
 - Methods:  
-  - `.add("class")`  
-  - `.remove("class")`  
-  - `.toggle("class")`
+  - `element.classList.add("class")`  
+  - ``element.classList.remove("class")`  
+  - ``element.classList.toggle("class")`
 - Example toggle:
   ```js
   toggleBtn.addEventListener("click", () => menu.classList.toggle("show"));
   ```
-
 ---
-
-# **📌 setTimeout()**
+# **📌 setTimeout(functionToRun, runFunctionAfterThisMuchTimeHasPassed)**
 - Runs code **once after a delay**.
 - Example:
   ```js
   setTimeout(() => console.log("Runs after 3s"), 3000);
   ```
 
-# **📌 setInterval()**
+# **📌 setInterval(functionToRun, runFunctionEverySoManySeconds)**
 - Runs code **repeatedly** at fixed intervals.
 - Use `clearInterval()` to stop it.
 - Example:
   ```js
-  const id = setInterval(() => console.log("Tick"), 1000);
-  setTimeout(() => clearInterval(id), 5000);
+  const ID = setInterval(() => console.log("Tick"), 1000);
+  setTimeout(() => clearInterval(ID), 5000);
   ```
 
 ---
-
 # **📌 requestAnimationFrame()**
-- Schedules animation updates **before the next screen repaint**.
+- Schedules an animation update **before the next screen repaint(Browser Refresh)**.
 - Produces smoother animations than `setInterval`.
 - Example loop:
   ```js
@@ -172,12 +170,11 @@
     update();
     requestAnimationFrame(animate);
   }
-  ```
+ ```
 
 ---
-
 # **📌 Web Animations API**
-- Create animations directly in JS.
+- CREATE ANIMATIONS DIRECTLY IN JS.
 - Supports duration, easing, direction, iterations, etc.
 - Example:
   ```js
@@ -188,19 +185,17 @@
   ```
 
 ---
-
 # **📌 Canvas API**
-- Used for drawing shapes, text, images, and graphics.
-- Requires a `<canvas>` element and a rendering context.
+- A TOOL TO CONTROL GRAPHICS INSIDE JS r drawing shapes, text, images, and graphics.
+- Requires a `<canvas>` element in HTML.
 - Example:
   ```js
-  const ctx = canvas.getContext('2d');
-  ctx.fillStyle = 'crimson';
-  ctx.fillRect(1, 1, 150, 100);
+  const ctx = canvas.getContext('2d');   //draw in 2D
+  ctx.fillStyle = 'crimson';             //set background
+  ctx.fillRect(1, 1, 150, 100);          //Draw a rectangle
   ```
 
 ---
-
 # **📌 Dialogs & Modals (`<dialog>` element)**
 
 ### **Modal vs Non‑Modal**
