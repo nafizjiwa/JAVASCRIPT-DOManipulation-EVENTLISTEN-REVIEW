@@ -55,6 +55,17 @@
 
 ### **removeChild()**
 - Removes a specific child node from the DOM.
+
+    - <ul id="desserts">
+        <li>Cake</li>
+        <li>Pie</li>
+      </ul>
+      
+      const dessertsList = document.getElementById("desserts");
+      const listItem = document.createElement("li");
+
+      listItem.textContent = "Cookies";
+      dessertsList.appendChild(listItem);
 ---
 
 # **Attributes**
