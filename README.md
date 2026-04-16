@@ -25,13 +25,13 @@
 ---
 
 # **DOM Selection Methods**
-    ### **getElementById()**
+### **getElementById()**
     - Selects and returns **one** element by unique ID.
     
-    ### **querySelector()**
+### **querySelector()**
     - Selects and returns the **first** element matching a CSS selector.
     
-    ### **querySelectorAll()**
+### **querySelectorAll()**
     - Selects and returns **all** matching elements in a NodeList.
 ---
 
