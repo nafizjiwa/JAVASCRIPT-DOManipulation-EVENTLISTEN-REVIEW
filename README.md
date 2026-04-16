@@ -57,11 +57,14 @@
         <li>Cake</li>
         <li>Pie</li>
       </ul>
-      
+      //Select parent
       const dessertsList = document.getElementById("desserts");
+      //Create child list
       const listItem = document.createElement("li");
 
+      //add text to child
       listItem.textContent = "Cookies";
+      //append child to parent
       dessertsList.appendChild(listItem);
 ---
 
