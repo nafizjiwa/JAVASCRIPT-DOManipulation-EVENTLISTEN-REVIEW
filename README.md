@@ -196,26 +196,26 @@
   ```
 
 ---
-# **📌 Dialogs & Modals (`<dialog>` element)**
-
-### **Modal vs Non‑Modal**
-- **Modal**: blocks interaction with the rest of the page.
+# **📌 Dialogs & Modals (using `<dialog>` element)**
+- Dialogs allow info to be displayed to user
+### **Dialoggs - Modal vs Non‑Modal**
+- **Modal**: blocks interaction with the rest of the page until user interacts with modal.
 - **Non‑modal**: allows interaction with the page behind it.
 
-### **Open a modal**
+### **To Open a modal**
 ```js
+const dialog = document.getElementById('my-modal');
+ElementToOpenButton.addEventListener('click', () => {
+  dialog.show();
+});
+
 dialog.showModal();
 ```
-
-### **Open a non‑modal dialog**
-```js
-dialog.show();
-```
-
 ### **Close a dialog**
 ```js
-dialog.close();
+ElementToCloseButton.addEventListener('click', () => {
+  dialog.close();
+});
 ```
----
 
 
